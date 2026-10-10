@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LearnForge — AI Study Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+    <header>
+        <div class="logo">⚡ Learn<span>Forge</span></div>
+        <div class="tag">AI-Powered Learning</div>
+    </header>
+
+    <h1>Learn smarter.<br><em>Remember longer.</em></h1>
+
+    <p class="sub">
+        Turn any study topic into a clear explanation and a practice quiz.
+        Learn actively, get feedback, and track your progress.
+    </p>
+
+    <div class="layout">
+        <main class="panel">
+            <h2>Your study workspace</h2>
+
+            <p class="hint">
+                Choose a subject, enter a topic, and select your difficulty level
+                to generate personalized explanations and practice questions.
+            </p>
+
+            <label for="subject">Subject</label>
+            <select id="subject">
+                <option value="math">Mathematics</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="english">English</option>
+                <option value="computing">Computer Science</option>
+            </select>
+
+            <label for="topic">What do you want to study?</label>
+            <input
+                id="topic"
+                placeholder="e.g. quadratic equations, photosynthesis, algorithms"
+                maxlength="120"
+            >
+
+            <label for="level">Difficulty</label>
+            <select id="level">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <div class="actions">
+                <button id="explain">Explain topic</button>
+                <button id="quiz" class="secondary">Generate quiz</button>
+            </div>
+
+            <div id="output" class="result" aria-live="polite"></div>
+            <div id="quizArea"></div>
+        </main>
+
+        <aside class="panel">
+            <span class="pill">YOUR PROGRESS</span>
+
+            <h2 style="margin-top:20px">Practice dashboard</h2>
+
+            <div class="stat" id="completed">0</div>
+            <p class="small">Quizzes completed</p>
+
+            <div class="stat" id="average">—</div>
+            <p class="small">Average score</p>
+
+            <h2 style="margin-top:28px">Recent sessions</h2>
+            <ol id="history" class="history"></ol>
+
+            <button id="clear" class="secondary">Clear history</button>
+
+            <div class="footer">
+                Privacy: Your quiz scores and learning history are stored
+                locally in your browser. Study topics are processed by an AI
+                service to generate personalized learning content.
+            </div>
+        </aside>
+    </div>
+
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

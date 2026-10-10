@@ -1,0 +1,8 @@
+{
+  "name": "learnforge-ai-tutor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ForgeHacks AI for Education prototype",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" }
+}
